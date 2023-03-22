@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<f:view>
+    <h:head>
+        <title> Lab 10</title>
+    </h:head>
+    <h:body style="background-color: white" >
+        <h1> Lab 10</h1>
+        <h4 style="font: -moz-window">Welcome </h4>
+        <h:form styleClass="block-list" >
+            <h:panelGrid style="background-color: #eab3ff" columns="2">
+                <h:outputLabel value="begin:" for="begin"/>
+                <h:inputText value="#{logic.begin}" id="begin"/>
+                <h:outputLabel value="end:" for="end"/>
+                <h:inputText value="#{logic.end}" id="end"/>
+                <h:outputLabel value="a:" for="a"/>
+                <h:inputText value="#{logic.a}" id="a"/>
+                <h:outputLabel value="h:" for="h"/>
+                <h:inputText value="#{logic.step}" id="h"/>
+            </h:panelGrid>
+            <h:panelGrid style="font: menu">
+                <h:commandButton value="calculate" action="#{logic.show()}"/>
+            </h:panelGrid>
+        </h:form>
+        <h:form style="font-size: large">
+            <h:outputText value="Result"/>
+        </h:form>
+        <h:form>
+            <h:panelGrid style="background-color: #99ffd7" columns="4">
+                <h:outputText value="max Y:"/>
+                <h:outputText id="maxYNumber" value="#{logic.valueMaxYNumber}"/>
+                <h:outputText value="max Y index :"/>
+                <h:outputText id="maxYIndex" value="#{logic.valueIndexMaxY}"/>
+                <h:outputText value="min Y:"/>
+                <h:outputText id="minYNumber" value="#{logic.valueMinYNumber}"/>
+                <h:outputText value="min Y index :"/>
+                <h:outputText id="minYIndex" value="#{logic.valueIndexMinY}"/>
+                <h:outputText value="sumY :"/>
+                <h:outputText id="sum" value="#{logic.sum}"/>
+                <h:outputText value="middle Y:"/>
+                <h:outputText id="mid" value="#{logic.mid}"/>
+                <h:outputText value="max X:"/>
+                <h:outputText id="maxXNumber" value="#{logic.valueMaxXNumber}"/>
+                <h:outputText value="min X:"/>
+                <h:outputText id="minXNumber" value="#{logic.valueMinXNumber}"/>
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</f:view>
+</html>
